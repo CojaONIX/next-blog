@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default async function About() {
 
-    const response = await fetch("https://dummyjson.com/posts?limit=1");
-    const data = await response.json();
-    const post = data['posts'][0];
+    const response = await fetch("https://dummyjson.com/posts/3");
+    const post = await response.json();
+    //const post = data['posts'][0];
 
     return (
         <>
