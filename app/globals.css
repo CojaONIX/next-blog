@@ -85,19 +85,9 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,6 +96,10 @@ a {
   }
 }
 
-.footer {
+footer {
   text-align: center;
+  background-color: brown;
+  color: white;
+  padding: 2rem;
+  margin-top: 5rem;
 }
