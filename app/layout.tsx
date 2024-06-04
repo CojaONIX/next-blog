@@ -20,8 +20,9 @@ export default function RootLayout({
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/prvi-clanak">Prvi Clanak</a></li>
-        <li><a href="/drugi-clanak">Drugi Clanak</a></li>
+        <li><a href="/blog/prvi-clanak">Prvi Clanak</a></li>
+        <li><a href="/blog/drugi-clanak">Drugi Clanak</a></li>
+        <li><a href="/blog/deveti-clanak">Deveti Clanak</a></li>
       </ul>
 
       {children}
