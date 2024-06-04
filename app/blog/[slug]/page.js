@@ -12,21 +12,17 @@ export default function BlogSlug({params}) {
         }
     ];
 
-    const blogExists = blogs.filter((blog) => {
-        if(blog.title.toLowerCase().replace(' ', '-') === params.slug) {
-            return blog;
-        }
-    });
+    const blogExists = blogs.find(blog => blog.title.toLowerCase().replace(' ', '-') === params.slug);
 
     return (
         <>
             <h1>Blog Page</h1>
             <h3>{params.slug}</h3>
             <hr/>
-            {blogExists[0]
+            {blogExists
                 ? <>
-                    <h2>{blogExists[0].title}</h2>
-                    <p>{blogExists[0].body}</p>
+                    <h2>{blogExists.title}</h2>
+                    <p>{blogExists.body}</p>
                   </>
                 : <h2>Blog not exists</h2>
             }
