@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default async function Products() {
 
@@ -9,13 +8,13 @@ export default async function Products() {
         <>
             <h1>Products Page</h1>
             {data.products.map(function(item, index) {
-                let url = "/products/" + item.id;
                 return (
-                    <>
-                        <br/>
-                        <h4><a href={url}>{item.id} - {item.title}</a></h4>
-                        <p>{item.description}</p>
-                    </>
+                    <a href={"/products/" + item.id} key={index}>
+                        <div className="product">
+                            <h4>{item.id} - {item.title}</h4>
+                            <p>{item.description}</p>
+                        </div>
+                    </a>
                     )
             })}
 

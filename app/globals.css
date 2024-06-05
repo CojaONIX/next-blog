@@ -108,3 +108,12 @@ hr {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.product {
+  width: 200px;
+  display: inline-block;
+  border: 1px solid black;
+  vertical-align: text-top;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}

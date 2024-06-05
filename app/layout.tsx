@@ -17,19 +17,20 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={inter.className}>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/products">Products</a></li>
-        <li><a href="/blog/prvi-clanak">Prvi Clanak</a></li>
-        <li><a href="/blog/drugi-clanak">Drugi Clanak</a></li>
-        <li><a href="/blog/deveti-clanak">Deveti Clanak</a></li>
-      </ul>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog/prvi-clanak">Prvi Clanak</a></li>
+      <li><a href="/blog/drugi-clanak">Drugi Clanak</a></li>
+      <li><a href="/blog/deveti-clanak">Deveti Clanak</a></li>
+      <br/>
+      <li><a href="/products">Products</a></li>
+    </ul>
 
-      {children}
+    {children}
 
-      <footer>
-        Footer
+    <footer>
+    Footer
       </footer>
     </body>
     </html>
