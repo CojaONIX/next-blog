@@ -117,3 +117,16 @@ hr {
   margin: 0.5rem;
   padding: 0.5rem;
 }
+
+.review {
+  width: 500px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  vertical-align: text-top;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.ratingStar {
+  color: chocolate;
+}
