@@ -1,14 +1,13 @@
 import Image from "next/image";
+import {getProductByID} from "../../../src/services/productService";
 
 export default async function ProductID({params}) {
-    const response = await fetch(process.env.PRODUCT_API_URL + "/products/" + params.ID);
 
-    if(response.status === 404) {
+    const data = await getProductByID(params.ID);
+
+    if(!data) {
         return <h1>Proizvod ID={params.ID} ne postoji</h1>;
     }
-
-    const data = await response.json();
-
 
     return (
         <>

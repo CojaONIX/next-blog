@@ -1,8 +1,9 @@
+import getAllProducts from "../../src/services/productService";
 
 export default async function Products() {
 
-    const response = await fetch(process.env.PRODUCT_API_URL + "/products?limit=0&select=id,title,description");
-    const data = await response.json();
+
+    const data = await getAllProducts(0)
 
     return (
         <>
