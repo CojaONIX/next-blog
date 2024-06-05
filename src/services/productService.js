@@ -19,3 +19,13 @@ export async function getProductByID(productID) {
 
     return await response.json();
 }
+
+export async function searchProductByQuery(query) {
+
+    const response = await fetch(process.env.PRODUCT_API_URL + "/products/search?q=" + query);
+    if (!response.ok) {
+        return false;
+    }
+
+    return await response.json();
+}

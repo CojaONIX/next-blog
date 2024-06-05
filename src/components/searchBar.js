@@ -2,8 +2,10 @@
 
 const SearchBar = () => {
 
-    const search = (searchTerm) => {
-        console.log(searchTerm);
+    const search = async (searchTerm) => {
+        const response = await fetch('/api/search?s=' + searchTerm);
+        console.log(await response.json());
+        //return response.json();
     }
 
     return <>

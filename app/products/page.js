@@ -4,7 +4,6 @@ import SearchBar from "../../src/components/searchBar";
 
 export default async function Products() {
 
-
     const data = await getAllProducts(0)
 
     return (
