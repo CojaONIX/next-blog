@@ -1,4 +1,6 @@
 import getAllProducts from "../../src/services/productService";
+import SearchBar from "../../src/components/searchBar";
+
 
 export default async function Products() {
 
@@ -7,6 +9,7 @@ export default async function Products() {
 
     return (
         <>
+            <SearchBar />
             <h1>Products Page</h1>
             {data.products.map((item, index) => {
                 return (

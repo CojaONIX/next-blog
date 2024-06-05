@@ -6,8 +6,8 @@ export default async function getAllProducts(limit = 9) {
             revalidate: 3600,
         }
     });
-    return await response.json();
 
+    return await response.json();
 }
 
 export async function getProductByID(productID) {
@@ -18,5 +18,4 @@ export async function getProductByID(productID) {
     }
 
     return await response.json();
-
 }
