@@ -1,10 +1,14 @@
 import Image from "next/image";
 
 export default async function ProductID({params}) {
-    const response = await fetch("https://dummyjson.com/products/" + params.ID);
+    const response = await fetch(process.env.PRODUCT_API_URL + "/products/" + params.ID);
+
+    if(response.status === 404) {
+        return <h1>Proizvod ID={params.ID} ne postoji</h1>;
+    }
+
     const data = await response.json();
 
-    const stars = "<span>X</span><span>X</span><span>X</span>";
 
     return (
         <>
@@ -27,12 +31,12 @@ export default async function ProductID({params}) {
 
             <hr/>
             <h2>Reviews:</h2>
-            {data.reviews.map((review) => (
-                <div key={review} className='review'>
+            {data.reviews.map((review, index) => (
+                <div key={index} className='review'>
                     <h3>{review.reviewerName}</h3>
-                    <div>
+                    <div className="ratingStars">
                     {Array.from({ length: review.rating }, (_, index) => (
-                        <span key={index} className="ratingStar">&#9733;</span>
+                        <span key={index}>&#9733;</span>
                     ))}
                     </div>
                     <p>{review.comment}</p>
