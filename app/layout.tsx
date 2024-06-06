@@ -19,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
     <body className={inter.className}>
     <ul>
+      <li><a href="/user/login">Login</a></li>
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/blog/prvi-clanak">Prvi Clanak</a></li>
