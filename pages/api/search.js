@@ -1,6 +1,4 @@
 
-// /api/search
-
 import {searchProductByQuery} from "../../src/services/productService";
 
 export default async function handler(req, res) {
@@ -9,5 +7,5 @@ export default async function handler(req, res) {
     }
 
     const data = await searchProductByQuery(req.query.s)
-    res.status(200).send(data);
+    res.status(200).json(data);
 }

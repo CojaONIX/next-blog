@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
+import SearchBar from "@/src/components/searchBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,8 @@ export default function RootLayout({
       <br/>
       <li><a href="/products">Products</a></li>
     </ul>
+    <hr/>
+    <SearchBar />
     <hr/>
 
     {children}
