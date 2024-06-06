@@ -29,3 +29,17 @@ export async function searchProductByQuery(query) {
 
     return await response.json();
 }
+
+export function addProduct(title, price, description) {
+    fetch(process.env.PRODUCT_API_URL + '/products/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            title: title,
+            price: price,
+            description: description
+        })
+    })
+        .then(res => res.json())
+        .then(console.log);
+}

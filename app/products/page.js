@@ -7,6 +7,8 @@ export default async function Products() {
     return (
         <>
             <h1>Products Page</h1>
+            <button><a href="/products/register">Register</a></button>
+            <br/>
             {data.products.map((item, index) => {
                 return (
                     <a href={"/products/" + item.id} key={index}>
